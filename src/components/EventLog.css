@@ -1,0 +1,248 @@
+.event-log {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.log-header h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.log-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.log-filters button {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e9ecef;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.log-filters button:hover {
+  border-color: #667eea;
+  background: #f8f9fa;
+}
+
+.log-filters button.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.log-entries {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.log-entries::-webkit-scrollbar {
+  width: 8px;
+}
+
+.log-entries::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.log-entries::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.log-entries::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.loading, .no-events {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}
+
+.log-entry {
+  background: #f8f9fa;
+  border-left: 4px solid #667eea;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.log-entry:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-critical {
+  border-left-color: #e74c3c;
+  background: #fee;
+}
+
+.event-positive {
+  border-left-color: #27ae60;
+  background: #efe;
+}
+
+.event-warning {
+  border-left-color: #f39c12;
+  background: #fff8e1;
+}
+
+.event-neutral {
+  border-left-color: #3498db;
+  background: #f8f9fa;
+}
+
+.log-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.log-icon {
+  font-size: 1.5rem;
+}
+
+.log-type {
+  font-weight: 700;
+  color: #2c3e50;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.log-time {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.log-description, .log-content {
+  margin: 0.5rem 0;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.log-events {
+  background: white;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin: 0.75rem 0;
+}
+
+.sub-event {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.sub-event:last-child {
+  margin-bottom: 0;
+}
+
+.sub-event-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.sub-event-text {
+  color: #495057;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.overseer-analysis {
+  background: #e3f2fd;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin: 0.75rem 0;
+  border-left: 3px solid #2196f3;
+}
+
+.analysis-header {
+  font-weight: 700;
+  color: #1565c0;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.analysis-text {
+  margin: 0;
+  color: #263238;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.hidden-costs {
+  margin: 0.5rem 0 0;
+  color: #c62828;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.philosophical-insight {
+  background: #f3e5f5;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin: 0.75rem 0;
+  border-left: 3px solid #9c27b0;
+  font-style: italic;
+}
+
+.insight-header {
+  font-weight: 700;
+  color: #6a1b9a;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-style: normal;
+}
+
+.philosophical-insight p {
+  margin: 0.25rem 0;
+  color: #4a148c;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.philosophical-insight .question {
+  font-weight: 600;
+  color: #6a1b9a;
+}
+
+.log-footer {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.log-timestamp {
+  font-size: 0.75rem;
+  color: #adb5bd;
+}
